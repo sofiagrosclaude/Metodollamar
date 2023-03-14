@@ -1,0 +1,26 @@
+
+namespace Desafío1
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            
+            
+            Telefono t1 = new Telefono("Motorola", "E32");
+            t1.setCodigoOperador(4);
+            t1.setNumeroTelefonico("113569824");
+            
+                       
+
+            Console.WriteLine("La marca del telefono es: " + t1.Marca);
+            Console.WriteLine("El modelo del telefono es: " + t1.Modelo); 
+            Console.WriteLine("El numero de telefono es: " + t1.getNumeroTelefonico());
+            Console.WriteLine("El código operador es: " + t1.getCodigoOperador());
+            Console.WriteLine(t1.llamar());
+            Console.WriteLine(t1.llamar("Contacto"));
+
+            Console.ReadKey();
+        }
+    }
+}
