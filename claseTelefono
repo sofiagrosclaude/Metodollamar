@@ -1,0 +1,64 @@
+namespace Desafío1
+{
+    internal class Telefono
+    {
+        public Telefono(string marca, string modelo) //Constructor que recibe marca y modelo por parámetros
+        { 
+            this.marca = marca;
+            this.modelo = modelo;
+        }
+
+        private string modelo;
+        private string marca;
+        private string numeroTelefonico;
+        private int codigoOperador;
+        private string contacto;
+        
+        public string Modelo //solo get
+        {
+            get { return modelo; }
+        }
+
+
+        public string Marca //solo get
+        {
+            get { return marca; }
+
+        }
+        public void setCodigoOperador(int e) //metodo
+        {
+            codigoOperador = e;
+        }
+
+        public int getCodigoOperador() //metodo
+        {
+            if(codigoOperador > 0 && codigoOperador <= 3) 
+                return codigoOperador;
+            else return 0;
+        }
+
+       
+        public void setNumeroTelefonico (string a)
+        {
+            numeroTelefonico = a;
+        }
+
+        public string getNumeroTelefonico()
+        {
+            return numeroTelefonico;
+        }
+     
+        public string llamar()
+        {
+            return "Realizando llamada... ";
+        }
+  
+      
+
+        public string llamar(string contacto)
+        {
+            return "Llamando a " + contacto;
+        }
+        
+    }
+}
